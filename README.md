@@ -22,4 +22,4 @@ The Inventory Management System is a simple yet effective application designed t
 
 🔍 Search & Filter: Locate items by category, brand, or name .
 
-💾 File-based Storage: Save and load inventory data using text or CSV files (or Replit DB for online storage).
+💾 File-based Storage: Save and load inventory data using text or CSV files.
