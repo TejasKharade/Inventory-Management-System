@@ -210,7 +210,7 @@ public:
         Product p;
         ofstream out("Book1.csv");
         out << "ID,Name,Category,Brand,Quantity,Price\n";
-        for (auto &p : inventory)
+        for (Product &p : inventory)
         {
             out << p.get_id() << "," << p.get_name() << "," << p.get_category() << "," << p.get_brand() << "," << p.get_quantity() << "," << p.get_price() << endl;
         }
@@ -233,7 +233,7 @@ public:
              << endl;
 
         header();
-        for (auto &p : inventory)
+        for (Product &p : inventory)
         {
             p.display();
         }
@@ -304,7 +304,7 @@ public:
         cout << "Enter the ID of the Product you want to search: ";
         cin >> product_id;
         transform(product_id.begin(), product_id.end(), product_id.begin(), ::tolower);
-        for (auto &p : inventory)
+        for (Product &p : inventory)
         {
             string str = p.get_id();
             transform(str.begin(), str.end(), str.begin(), ::tolower);
@@ -328,7 +328,7 @@ public:
         header();
 
         bool found = false;
-        for (auto &p : inventory)
+        for (Product &p : inventory)
         {
             string str = p.get_category();
             transform(str.begin(), str.end(), str.begin(), ::tolower);
@@ -351,7 +351,7 @@ public:
         header();
 
         bool found = false;
-        for (auto &p : inventory)
+        for (Product &p : inventory)
         {
             string str = p.get_brand();
             transform(str.begin(), str.end(), str.begin(), ::tolower);
@@ -374,7 +374,7 @@ public:
         transform(name.begin(), name.end(), name.begin(), ::tolower);
         bool found = false;
         header();
-        for (auto &p : inventory)
+        for (Product &p : inventory)
         {
             string str = p.get_name();
             transform(str.begin(), str.end(), str.begin(), ::tolower);
@@ -397,7 +397,7 @@ public:
 
         transform(item_id.begin(), item_id.end(), item_id.begin(), ::tolower); // Header file: <algorithm> and for tolower <cctype>
 
-        for (auto &p : inventory)
+        for (Product &p : inventory)
         {
             string str = p.get_id();
             transform(str.begin(), str.end(), str.begin(), ::tolower);
